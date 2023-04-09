@@ -9,8 +9,36 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/b4a959dac2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <template id="custom-icon-link-template">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <style>
+            .box-nav {
+                display: flex;
+                background-color: #f5f5f5;
+                border-right: 1px solid #ddd;
+            }
 
+            .box-nav a {
+                margin: 5px;
+                text-decoration: none;
+                color: #818181;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .box-nav a:hover {
+                cursor: pointer;
+                color: #fff;
+                background-color: #2d353c;
+            }
+        </style>
+        <div class="box-nav">
+            <a>
+                <i></i>
+                <span></span>
+            </a>
+        </div>
+    </template>
     <style>
         header,
         footer {
@@ -96,7 +124,7 @@
                             <p>Makke <i>"Jekke"</i> Peippaaja | 7.2.2020</p>
                         </div>
                         <div class="p-2">
-                            <i class="fa-solid fa-thumbs-up"></i>102
+                            <i class="fas fa-thumbs-up"></i>102
                             <i class="fas fa-comments"></i>7
                         </div>
                     </div>
@@ -206,23 +234,23 @@
         <div class="d-flex flex-column" style="flex: 1;">
             <div class="d-flex flex-column box-nav">
                 <h3>Ajassa</h3>
-                <a href="#"><i class="fas fa-desktop"></i> Oma työpöytä</a>
-                <a href="#"><i class="fas fa-newspaper"></i> Uutiset</a>
-                <a href="#"><i class="fas fa-bell"></i> Ilmoitukset</a>
-                <a href="#"><i class="fas fa-calendar"></i> Kalenteri</a>
-                <a href="#"><i class="fas fa-users"></i> Ryhmätyötila</a>
-                <a href="#"><i class="fas fa-comments"></i> Keskustelu</a>
-                <a href="#"><i class="fas fa-envelope"></i> Sähköposti</a>
+                <custom-icon-link icon-class="fas fa-desktop" text-content="Oma työpöytä"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-newspaper" text-content="Uutiset"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-bell" text-content="Ilmoitukset"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-calendar" text-content="Kalenteri"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-users" text-content="Ryhmätyötila"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-comments" text-content="Keskustelu"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-envelope" text-content="Sähköposti"></custom-icon-link>
             </div>
             <div class="d-flex flex-column box-nav">
                 <h3>Info</h3>
-                <a href="#"><i class="fas fa-users"></i> Henkilöstö</a>
-                <a href="#"><i class="fas fa-graduation-cap"></i> Koulutukset</a>
-                <a href="#"><i class="fas fa-briefcase"></i> asiakkaat ja vastuut</a>
-                <a href="#"><i class="fas fa-clock"></i> Työsuunnitelmat</a>
-                <a href="#"><i class="fas fa-lock"></i> Tietoturva</a>
-                <a href="#"><i class="fas fa-book"></i> Kirjasto</a>
-                <a href="#"><i class="fas fa-id-card"></i> Yhteystiedot</a>
+                <custom-icon-link icon-class="fas fa-users" text-content="Henkilöstö"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-graduation-cap" text-content="Koulutukset"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-briefcase" text-content="asiakkaat ja vastuut"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-clock" text-content="Työsuunnitelmat"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-lock" text-content="Tietoturva"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-book" text-content="Kirjasto"></custom-icon-link>
+                <custom-icon-link icon-class="fas fa-id-card" text-content="Yhteystiedot"></custom-icon-link>
             </div>
         </div>
     </div>
@@ -232,5 +260,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="CustomIconLink.js"></script>
 </body>
 </html>
